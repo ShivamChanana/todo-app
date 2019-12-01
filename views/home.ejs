@@ -1,0 +1,20 @@
+<%- include partials/header %>
+
+    <h1>Enter Todo task</h1>
+    <form method = "POST" action = "/">
+    <input type = "text" name = "name" placeholder = "Write todo list">
+    <button type = "submit">Submit</button>
+    </form>
+    <div class = "list">
+        <ul>
+        <%data.forEach((indTask)=>{%>
+            <li><%=indTask.name%>
+            <a href = "/update/<%=indTask._id%>">Update</a>
+            <form method = "POST" action = "/delete/<%=indTask._id%>?_method=DELETE">
+            <button type = "submit">Delete</button>
+            </form>
+            </li>
+        <%})%>
+    </ul>
+    </div>
+    <%- include partials/footer %>
