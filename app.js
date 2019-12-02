@@ -12,9 +12,9 @@ const todos = require("./models/Todos")
 const User = require("./models/users")
 const methodOverride = require("method-override")
 const apiRouter = require("./routes/apiRouter")
-var partials      = require('express-partials');
 
-// app.use("/api", apiRouter)
+
+
 app.set("view engine", "ejs")
 app.use(bodyParser.urlencoded({ extended : true}))
 app.use(bodyParser.json())
@@ -26,7 +26,8 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
-app.use(partials());
+
+
 let transporter = nodemailer.createTransport({
     pool: true,
     service: "Gmail",
@@ -89,9 +90,11 @@ app.use((req, res, next) => {
     next()
 })
 
-
+//apiRouter
+app.use("/api", apiRouter)
 
 //appRoute
+
 
 app.get("/", (req, res) => {
     res.render("index")

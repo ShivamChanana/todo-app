@@ -1,19 +1,22 @@
 const express = require("express")
-const route = express.Router()
+const router = express.Router()
+// const app = express()
 const todos = require("../models/Todos")
 
-route.get("/api", (req,res)=>{
-    todos.find()
+
+router.get("/", (req,res)=>{
+    todos.find({})
     .then((data)=>{
         // res.render("index", {data : data})
-        res.status(400).json({ message:"Api hit successfully.", data:data});
+        res.status(200).json({ message:"Api hit successfully.", data:data})
+        // console.log(data)
     })
     .catch((err)=>{
         console.log(err)
     })
 })
 
-route.post("/api", (req,res)=>{
+router.post("/", (req,res)=>{
     todos.create({
         name: req.body.name
     })
@@ -29,7 +32,7 @@ route.post("/api", (req,res)=>{
 
 //update
 
-route.put("/api/update/:id", (req,res)=>{
+router.put("/update/:id", (req,res)=>{
     todos.findByIdAndUpdate((req.params.id), {
         name: req.body.name
          })
@@ -44,7 +47,7 @@ route.put("/api/update/:id", (req,res)=>{
 })
 
 //delete
-route.delete("/api/delete/:id", (req,res)=>{
+router.delete("/delete/:id", (req,res)=>{
     todos.findByIdAndDelete(req.params.id)
     .then(()=>{
         // res.redirect("/")
@@ -55,4 +58,4 @@ route.delete("/api/delete/:id", (req,res)=>{
     })
 })
 
-module.exports = route
+module.exports = router
