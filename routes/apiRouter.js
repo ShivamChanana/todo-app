@@ -1,6 +1,6 @@
 const express = require("express")
 const route = express.Router()
-
+const todos = require("../models/Todos")
 
 route.get("/api", (req,res)=>{
     todos.find()

@@ -1,7 +1,7 @@
 <%- include partials/header %>
 
     <h1>Enter Todo task</h1>
-    <form method = "POST" action = "/">
+    <form method = "POST" action = "/home">
     <input type = "text" name = "name" placeholder = "Write todo list">
     <button type = "submit">Submit</button>
     </form>
@@ -9,8 +9,8 @@
         <ul>
         <%data.forEach((indTask)=>{%>
             <li><%=indTask.name%>
-            <a href = "/update/<%=indTask._id%>">Update</a>
-            <form method = "POST" action = "/delete/<%=indTask._id%>?_method=DELETE">
+            <a href = "/home/update/<%=indTask._id%>">Update</a>
+            <form method = "POST" action = "/home/delete/<%=indTask._id%>?_method=DELETE">
             <button type = "submit">Delete</button>
             </form>
             </li>
