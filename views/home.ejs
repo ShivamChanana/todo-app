@@ -1,11 +1,15 @@
 <%- include partials/header %>
-
-    <h1>Enter Todo task</h1>
-    <form method = "POST" action = "/home">
-    <input type = "text" name = "name" placeholder = "Write todo list">
-    <button type = "submit">Submit</button>
+    <div class = "home">
+        <div class ="mx-auto">
+            <div class = "text-center">
+        <h1>Enter Todo task</h1>
+    <form class="form" method = "POST" action = "/home">
+    <input type = "text" class="form-control" name = "name" placeholder = "Write todo list">
+    <button type = "submit" class="btn btn-light">Add</button>
     </form>
-    <div class = "list">
+</div>
+</div>
+    <div class = "list mx-auto text-center">
         <ul>
         <%data.forEach((indTask)=>{%>
             <li><%=indTask.name%>
@@ -17,4 +21,7 @@
         <%})%>
     </ul>
     </div>
+
+</div>
+
     <%- include partials/footer %>

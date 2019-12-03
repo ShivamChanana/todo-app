@@ -1,4 +1,57 @@
 body{
     height: 100%;
+    width: 100%;  
+}
+.index{
+    background-image: url("https://images.pexels.com/photos/6357/coffee-cup-desk-pen.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 90vh;
+}
+.index h1{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 3em;
+    color: white;
+}
+.index p{
+    font-family: "san-serif";
+    font-style: italic;
+    font-size: 2em;
+    color: white;
+
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    left: 0;
     width: 100%;
+    background-color:#3B2F2F;
+    color: white;
+}
+footer p{
+    margin-top: 10px;
+    font-family:  serif;
+    font-size: 15px;
+}
+.home{
+    background-image: url("https://images.pexels.com/photos/159627/pencils-clips-colour-pencils-foam-rubber-159627.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    color: white;
+}
+.home h1{
+    padding-top: 7%;
+    font-family: "sans-serif";
+    font-style: italic;
+}
+.form{
+    display: inline;
+    display: flex;
+}
+.form input[type = "text"]{
+margin-left: 25%;
+margin-right: 10px;
+width: 50%;
 }

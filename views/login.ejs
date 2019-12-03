@@ -1,8 +1,10 @@
 <%- include partials/header %>
 <br>
+<div class="card w-25 mx-auto shadow">
+  <div style = "padding: 25px">
 <h1 class="text-center text-uppercase">Login</h1>
 <form method = "POST" action = "/login">
-    <div class="form-group">
+    <div class = "form-group">
         <label for="exampleInputEmail1">Email address</label>
         <input type="email" name = "username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">   
       </div>
@@ -10,7 +12,11 @@
         <label for="exampleInputPassword1">Password</label>
         <input type="password" name = "password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="text-center form-group" >
+      <button type="submit" class="btn btn-success">Login</button>
+      </div>
     </form>
+  </div>
+</div>
 <%- include partials/footer %>
 
