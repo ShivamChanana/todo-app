@@ -9,19 +9,32 @@
     </form>
 </div>
 </div>
-    <div class = "list mx-auto text-center">
-        <ul>
-        <%data.forEach((indTask)=>{%>
-            <li><%=indTask.name%>
-            <a href = "/home/update/<%=indTask._id%>">Update</a>
-            <form method = "POST" action = "/home/delete/<%=indTask._id%>?_method=DELETE">
-            <button type = "submit">Delete</button>
-            </form>
-            </li>
+    <div class = "container">
+        <div class = "row">
+            <div class= "col-sm">
+            <table class="table text-center">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Task</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                            <%data.forEach((indTask)=>{%>
+                      <tr scope="row">  
+                        <td class = "name"><%=indTask.name%></td>
+                        <td><a  class="btn btn-primary" href = "/home/update/<%=indTask._id%>">Update</a></td>
+                        <td><form method = "POST" action = "/home/delete/<%=indTask._id%>?_method=DELETE">
+                            <button type = "submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                      </tr>
         <%})%>
-    </ul>
+                    </tbody>
+                    </table>
     </div>
-
 </div>
-
+</div>
+</div>
     <%- include partials/footer %>

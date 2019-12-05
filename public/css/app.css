@@ -55,3 +55,31 @@ margin-left: 25%;
 margin-right: 10px;
 width: 50%;
 }
+table{
+    font-family: "sans-serif";
+    margin-top: 20px;
+    font-size: 1.3em;
+}
+table tbody{
+    color: white;
+}
+body .update{
+    background-image: url("https://images.pexels.com/photos/625219/pexels-photo-625219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    color: white;
+    font-family: "sans-serif";
+}
+.update h1{
+    padding: 7% 0 2% 0 ;
+}
+.uform{
+    display: inline;
+    display: flex;
+}
+.uform input[type = "text"]{
+    margin-left: 25%;
+    margin-right: 10px;
+    width: 50%;
+    }
